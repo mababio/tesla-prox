@@ -22,8 +22,8 @@ def tesla_prox(request):
         lon = float(request_json['lon'])
 
     radius = 6371
-    dlat = math.radians(lat-constant.LATHOME)
-    dlon = math.radians(lon-constant.LONHOME)
+    dlat = math.radians(lat - constant.LATHOME)
+    dlon = math.radians(lon - constant.LONHOME)
     a = math.sin(dlat/2) * math.sin(dlat/2) + math.cos(math.radians(constant.LATHOME)) * math.cos(math.radians(lat)) * \
         math.sin(dlon/2) * math.sin(dlon/2)
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
