@@ -1,0 +1,15 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - function-tesla-prox
+  - --region=us-east4
+  - --service-account=service-account-wyze-function@ensure-dev-zone.iam.gserviceaccount.com
+  - --entry-point=tesla_prox
+  - --source=src
+  - --trigger-http
+  - --runtime=python39
+options:
+  logging: CLOUD_LOGGING_ONLY
