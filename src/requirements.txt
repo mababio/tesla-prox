@@ -1,3 +1,5 @@
 # Function dependencies, for example:
 # package>=version
 googlemaps
+dynaconf==3.1.11
+google-cloud-logging==3.2.2
