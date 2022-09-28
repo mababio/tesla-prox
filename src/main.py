@@ -1,7 +1,7 @@
 import math
 import json
 import googlemaps
-from config import settings
+from src.config import settings
 from logs import logger
 
 
