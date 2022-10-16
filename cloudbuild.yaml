@@ -5,7 +5,7 @@ steps:
 
 - name: python
   entrypoint: python
-  args: [ "load_settings.py", download , $PROJECT_NUMBER ]
+  args: [ "load_settings.py", download , $PROJECT_NUMBER, '/src/settings.toml' ]
   id: load_settings_toml
     `
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
