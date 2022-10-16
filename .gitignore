@@ -6,3 +6,4 @@
 # Ignore dynaconf secret files
 .secrets.*
 **/settings.toml
+.idea
