@@ -15,7 +15,6 @@ REMOVED
 
 
 def tesla_prox(request):
-    #lat, lon = 0, 0
     try:
         request_json = request.get_json()
         lat = float(request_json['lat'])
