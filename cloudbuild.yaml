@@ -7,7 +7,15 @@ steps:
   entrypoint: python
   args: [ "load_settings.py", download , $PROJECT_NUMBER, 'src/settings.toml' ]
   id: load_settings_toml
-    `
+
+
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+    - gsutil
+    - cp
+    - src/*
+    - gs://ababio-me-gcp-cloud-build-generated-artifacts-cloud-function/tesla/prox
+
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   args:
   - gcloud
