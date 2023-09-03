@@ -6,7 +6,7 @@ from logs import logger
 
 
 def is_on_home_street(lat, lon):
-REMOVED
+    gmaps = googlemaps.Client(key=settings['production']['key']['gmaps'])
     reverse_geocode_result = gmaps.reverse_geocode((lat, lon))
     for i in reverse_geocode_result:
         if 'Arcuri Court' in i['address_components'][0]['long_name']:

@@ -8,14 +8,6 @@ steps:
   args: [ "load_settings.py", download , $PROJECT_NUMBER, 'src/settings.toml' ]
   id: load_settings_toml
 
-
-#- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-#  args:
-#    - gsutil
-#    - cp
-#    - src/*
-#    - gs://ababio-me-gcp-cloud-build-generated-artifacts-cloud-function/tesla/prox
-
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   args:
   - gcloud
@@ -23,7 +15,6 @@ steps:
   - deploy
   - function-tesla-prox
   - --region=us-east4
-#  - --service-account=service-account-wyze-function@ensure-dev-zone.iam.gserviceaccount.com
   - --service-account=tesla-sc-get-location@tesla-automation-397321.iam.gserviceaccount.com
   - --entry-point=tesla_prox
   - --source=src
